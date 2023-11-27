@@ -1,4 +1,3 @@
 package com.example.math.models
 
-class Record {
-}
+data class Record(val correct : Int, val incorrect:Int, val level:Int, val newRecord:Boolean)

@@ -85,7 +85,7 @@ fun HomeView(navController: NavController, level: Int) {
         val shared = SharedPreference.getInstance(context)
         val newRecord = shared.getRecord(level) < correct.intValue
         if (newRecord) shared.setRecord(level, correct.intValue)
-        navController.navigate(route = "result_screen/${correct.intValue}/${total.intValue - correct.intValue}/$level/$newRecord")
+        navController.navigate(route = "record_view/${correct.intValue}/${total.intValue - correct.intValue}/$level/$newRecord")
     }
     if (openDialog.value) ShowDialog(navController = navController, openDialog)
 
